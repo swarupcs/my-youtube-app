@@ -1,10 +1,26 @@
 import "./App.css";
+import Body from "./components/Body";
+import Head from "./components/Head";
 function App() {
   return (
     <div>
-      <h1 className="text-3xl bg-red-50">Hello</h1>
+      <Head/>
+      <Body/>
     </div>
   );
 }
+/**
+Head
+Body
+  Sidebar
+    MenuItems
+  MainContainer
+    ButtonList
+    VideoContainer
+    VideoCard
+ * 
+ */
 
 export default App;
+
+

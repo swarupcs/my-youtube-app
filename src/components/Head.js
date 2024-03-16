@@ -36,13 +36,12 @@ const Head = () => {
     setSuggestions(json[1]);
 
     // update cache
-    dispatch(cacheResults({
-      [searchQuery]: json[1],
-    })
+    dispatch(
+      cacheResults({
+        [searchQuery]: json[1],
+      })
     );
-
   };
-
 
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());

@@ -4,6 +4,11 @@ import { toggleMenu } from "../utils/appSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
 import { json } from "react-router-dom";
 import { cacheResults } from "../utils/searchSlice";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoIosNotificationsOutline } from "react-icons/io";
+import { CiVideoOn } from "react-icons/ci";
+import { CiSearch } from "react-icons/ci";
+
 
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -50,6 +55,7 @@ const Head = () => {
   return (
     <div className="grid grid-flow-col p-5 m-2 shadow-lg">
       <div className="flex col-span-1">
+      {/* <GiHamburgerMenu onClick={() => toggleMenuHandler()} size="24px" className="cursor-pointer" /> */}
         <img
           onClick={() => toggleMenuHandler()}
           className="h-8 cursor-pointer"
@@ -67,7 +73,7 @@ const Head = () => {
       <div className="col-span-10 px-10">
         <div>
           <input
-            className="px=5 w-1/2 border border-gray-400 p-2 rounded-l-full"
+            className="w-full py-2 px-4 border border-gray-400 rounded-l-full outline-none"
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -75,7 +81,8 @@ const Head = () => {
             onBlur={() => setShowSuggestions(false)}
           />
           <button className="border border-gray-400 px-5 py-2 rounded-r-full bg-gray-100">
-            🔍
+            {/* 🔍 */}
+            <CiSearch className="h-6" />
           </button>
         </div>
 

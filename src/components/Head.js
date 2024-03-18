@@ -73,7 +73,7 @@ const Head = () => {
       <div className="col-span-10 px-10">
         <div>
           <input
-            className="w-full py-2 px-4 border border-gray-400 rounded-l-full outline-none"
+            className="px=5 w-1/2 border border-gray-400 p-2 rounded-l-full"
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -81,8 +81,8 @@ const Head = () => {
             onBlur={() => setShowSuggestions(false)}
           />
           <button className="border border-gray-400 px-5 py-2 rounded-r-full bg-gray-100">
-            {/* 🔍 */}
-            <CiSearch className="h-6" />
+            🔍
+            {/* <CiSearch className="h-6" /> */}
           </button>
         </div>
 
